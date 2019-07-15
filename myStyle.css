@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+div{
+    padding: 5px;
+    margin: 10px;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+    border: 0px;
+    background-color: aqua;
+}
+p{
+    display: inline;
+}
