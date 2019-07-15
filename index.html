@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="myStyle.css">
+        <title>DOMTest</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css.css">
     </head>
-    <body onload="initial()">  
-        <script src="app.js"></script>
-       
-        <div id="top">
-            <h1>wellcome</h1>
+    <body id="body" onload="setColor()">
+        
+        <script src='app.js'></script>
+        <div class="conteiner">
+            <div class="header">
+                <h1 id="headerText">Да Запомня !!!</h1>
+            </div>
+            <div id="bodyContent">
+                <input type="text" id="inputTask"/>
+                
+                <button id="btn" onclick="createTask()">createTask</button>
+            </div>
         </div>
-        <div id="content">
-            <p id="numOfTask"></p>
-            <input type="text" id="taskString" placeholder="no task"/>
-            <button type="button" id="b1" onclick="func1()">button</button>
-            <button type="button" id="b1" onclick="func2()">loadArr</button>
-            <p id="task2"></p>
-            <p id="task3"></p>
-            <p id="task4"></p>
-
-
-            
-        </div>
+    
     </body>
+
+
+
+
+
+</html>
 
 
 

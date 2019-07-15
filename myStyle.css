@@ -1,10 +1,24 @@
-body {
-  background-color: lightblue;
-}
+p{
+    margin: 5px 15px 25px 25px;
+    padding: 5px 10px 5px 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: lightgray;
+    text-align: left;
+    font-size: 18px;
+    font-family:sans-serif;
+    width: 250px;
+    text-decoration-color: aliceblue;
+    color:white;
 
-h1 {
-  color: navy;
-  margin-left: 20px;
+    }
+input{
+    margin: 25px;
+   
+}
+h1{
+    margin: 5px 5px 5px 25px;
 }
 
 div{
