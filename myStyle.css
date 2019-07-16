@@ -1,5 +1,5 @@
 p{
-    margin: 5px 15px 25px 25px;
+    margin: 5px 15px 25px 5px;
     padding: 5px 10px 5px 5px;
     border-style: solid;
     border-radius: 10px;
@@ -13,10 +13,6 @@ p{
     color:white;
 
     }
-input{
-    margin: 25px;
-   
-}
 h1{
     margin: 5px 5px 5px 25px;
 }
@@ -29,8 +25,9 @@ input{
     padding: 5px;
     margin: 5px;
     border: 0px;
-    background-color: aqua;
+    background-color: lightblue;
+    margin: 25px;
+    
+   
 }
-p{
-    display: inline;
-}
+

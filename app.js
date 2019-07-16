@@ -8,49 +8,43 @@ function setColor(){
 
 function createTask(){
     
-    var bodyContent = document.getElementById('bodyContent');
-    var inputTask = document.getElementById('inputTask').value;
-    var newInputTask = document.createElement('p');
-    var doneBtn = document.createElement('input');
-    //doneBtn.setAttribute('type','checkbox');
-    console.log(newInputTask);
+    var bodyContent = document.getElementById('bodyContent');//взема главния див
+    var inputTask = document.getElementById('inputTask').value;//взема текстовото поле
+    var newInputTask = document.createElement('p');//създава нов параграф
+
     var paragraph = document.getElementsByTagName('p');
-  ;
-    if(inputTask){
-        var taskNumber = counter +1;
-        //taskLengthValidation(inputTask,newInputTask);
-        newInputTask.innerHTML = taskNumber+" . "+inputTask//funkciq za proverka na daljinata i ako e po golqma ot poleto reset razmerite na p;
-        
-        counter += 1;
-        newInputTask.setAttribute('id',counter);
-        newInputTask.setAttribute('class','inClass');
-        //newInputTask.style.backgroundColor = '#339966';
-        
-        
-        
+    if(inputTask){//ако има текст
+        var taskNumber = counter +1;//номер на задача
+        newInputTask.innerHTML = taskNumber+" . "+inputTask;//изписва номер на задача и текст в нов параграф        
+        counter += 1;//увеличва брояча с 1
+        newInputTask.setAttribute('id',counter);//настройване на атрибут id
+        newInputTask.setAttribute('class','inClass');//настройване на атрибут class   
         bodyContent.appendChild(newInputTask);
-       // bodyContent.appendChild(doneBtn);
         document.getElementById('inputTask').value='';
         console.log('num of task: '+counter+'\ncontent: '+inputTask)
+     
     }
     newInputTask.addEventListener("mouseover", function( event ) {   
-  event.target.style.backgroundColor = "#339966";
+        event.target.style.backgroundColor = "#330066";
+        
+        
     });
     newInputTask.addEventListener("mouseout", function( event ) {   
-  event.target.style.backgroundColor = "gray";
+        event.target.style.backgroundColor = "gray";
     });
-    newInputTask.addEventListener("onclick", function( event ) {   
-  console.log(sevent.target);
+    newInputTask.addEventListener("mouseup", function( event ) {   
+        console.log(event.target.id);
+        event.target.style.backgroundColor = "red";
+        var nodeDel = event.target;
+        alert(nodeDel+'deleting?');
+        deleteTask(nodeDel);
+        //taskID = event.target.id;    
+        
+        
     }); 
 }
-function taskLengthValidation(inputTask,newInputTask){
-    if(inputTask.length>10){
-            console.log('else state or taskLenthValid funk');
-            console.log(inputTask.length);
-            newInputTask.setAttribute('width',inputTask.length);
-        
-    }else{
-        console.log('else state or taskLenthValid funk');
-        console.log(inputTask.length);
-    }
+function deleteTask(nodeDel){
+     // console.log('remove task '+ a +" "+b);
+     bodyContent.removeChild(nodeDel);
+    
 }
